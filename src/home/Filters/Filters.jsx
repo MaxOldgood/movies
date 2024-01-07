@@ -1,20 +1,25 @@
-import { Box, IconButton, Paper, Typography } from '@mui/material'
+import { Box, IconButton, Pagination, Paper, Typography } from '@mui/material'
 import CloseIcon from '@mui/icons-material/Close'
 import { SearchByTitle } from './SearchByTitle'
 import { SelectSortBy } from './SelectSortBy'
 import { ReleaseYearSlider } from './ReleaseYearSlider'
 import { SelectGenres } from './SelectGenres'
-
-const fetchedGenres = [{ name: 'genre_1' }, { name: 'genre_2' }]
+import { MoviesPagination } from './Pagination'
+import { useSelector } from 'react-redux'
+import { selectedFilters } from '../../store/selectors'
 
 export function Filters() {
+  const filtersState = useSelector(selectedFilters)
+  console.log(filtersState)
   return (
     <Paper
       sx={{
         padding: '16px',
         minWidth: '300px',
-        maxHeight: '723px',
+        maxHeight: '500px',
+        minHeight: '500px',
         display: 'flex',
+        justifyContent: 'space-between',
         flexDirection: 'column',
         gap: '10px',
       }}
@@ -23,7 +28,8 @@ export function Filters() {
       <SearchByTitle />
       <SelectSortBy />
       <ReleaseYearSlider />
-      <SelectGenres genres={fetchedGenres} />
+      <SelectGenres />
+      <MoviesPagination />
     </Paper>
   )
 }

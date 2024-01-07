@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-     "format": "prettier --write .",
+    "format": "prettier --write .",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -17,10 +17,13 @@
     "@fontsource/roboto": "^5.0.8",
     "@mui/icons-material": "^5.15.1",
     "@mui/material": "^5.15.1",
+    "@reduxjs/toolkit": "^2.0.1",
     "immer": "^10.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.1",
+    "redux": "^5.0.1",
     "use-immer": "^0.9.0"
   },
   "devDependencies": {
